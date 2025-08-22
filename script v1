@@ -1,14 +1,14 @@
 -- Script Launcher
--- Este script ejecuta varios scripts al mismo tiempo
+local scripts = {
+    "https://raw.githubusercontent.com/vonplayzyt/VoidHub/refs/heads/main/Voidhub.lua",
+    "https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt",
+    "https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub",
+    "https://raw.githubusercontent.com/poulolxd/script-pvp/refs/heads/main/script%20v1.lua" -- El tuyo
+}
 
--- Script 1: VoidHub
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vonplayzyt/VoidHub/refs/heads/main/Voidhub.lua"))()
+-- Config extra
+getgenv().Team = "Pirates"
 
--- Script 2: FlyGuiV3
-loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
-
--- Config extra antes de Script 3
-getgenv().Team = "Marines"
-
--- Script 3: MaruHub
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub"))()
+for _, url in ipairs(scripts) do
+    loadstring(game:HttpGet(url))()
+end
