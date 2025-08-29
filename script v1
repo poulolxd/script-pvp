@@ -2,9 +2,7 @@
 local scripts = {
     "https://raw.githubusercontent.com/vonplayzyt/VoidHub/refs/heads/main/Voidhub.lua",
     "https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt",
-    "https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub",
-    "https://raw.githubusercontent.com/poulolxd/script-pvp/refs/heads/main/script%20v1.lua" -- El tuyo
-}
+    }
 
 -- Config extra
 getgenv().Team = "Pirates"
